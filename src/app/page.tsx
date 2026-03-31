@@ -23,6 +23,7 @@ export default function HomePage() {
             className="object-cover"
             fill
             priority
+            quality={85}
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
@@ -81,7 +82,7 @@ export default function HomePage() {
                     alt={service.name}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 384px, 384px"
                     loading="lazy"
                   />
                 </div>

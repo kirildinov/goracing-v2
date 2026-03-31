@@ -36,7 +36,7 @@ const CookieConsent = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[998] bg-secondary text-secondary-foreground shadow-[0_-2px_12px_rgba(0,0,0,0.2)]">
       <div className="container-content py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm opacity-80 text-center sm:text-left">
+        <p className="text-sm text-gray-300 text-center sm:text-left">
           Folosim cookie-uri pentru a analiza traficul site-ului.{" "}
           <Link href="/politica-confidentialitate" className="text-secondary-foreground underline hover:text-primary transition-colors">
             Politica de Confidențialitate
