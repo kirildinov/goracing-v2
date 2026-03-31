@@ -14,17 +14,19 @@ const stats = [
 export default function HomePage() {
   return (
     <>
+      <link rel="preload" href="/hero-workshop.webp" as="image" type="image/webp" />
       {/* Hero */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/hero-workshop.webp"
             alt="Atelier GoRacing - service moto București"
-            className="object-cover"
-            fill
-            priority
-            quality={85}
-            sizes="100vw"
+            className="absolute inset-0 w-full h-full object-cover"
+            width={1440}
+            height={810}
+            fetchPriority="high"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
         </div>

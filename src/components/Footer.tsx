@@ -117,7 +117,7 @@ const Footer = () => (
         </Link>
       </div>
       <div className="container-content"><div className="border-t border-go-dark-lighter" /></div>
-      <p className="text-center text-xs text-gray-500 py-4">Website developed by Creative House.</p>
+      <p className="text-center text-xs text-gray-400 py-4">Website developed by Creative House.</p>
     </div>
   </footer>
 );
