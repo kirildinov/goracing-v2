@@ -114,6 +114,9 @@ export default function RootLayout({
           @media(min-width:640px){.sm\\:flex-row{flex-direction:row}}
           .hidden{display:none}@media(min-width:1024px){.lg\\:flex{display:flex}.lg\\:hidden{display:none}.lg\\:text-6xl{font-size:3.75rem;line-height:1}.container-content{padding-left:2rem;padding-right:2rem}}
         `}} />
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function(){var o=new MutationObserver(function(m){m.forEach(function(r){r.addedNodes.forEach(function(n){if(n.tagName==='LINK'&&n.rel==='stylesheet'&&n.href&&n.href.indexOf('/_next/')!==-1){n.media='print';n.onload=function(){this.media='all';this.onload=null};o.disconnect()}})})});o.observe(document.head,{childList:true})})();
+        `}} />
       </head>
       <body>
         <div className="min-h-screen flex flex-col">
