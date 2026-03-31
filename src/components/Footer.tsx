@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="container-content py-16 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <Image src="/logo.webp" alt="GoRacing" className="h-12 w-auto mb-4" width={310} height={95} />
+          <Image src="/logo.webp" alt="GoRacing" className="h-12 mb-4" width={156} height={48} style={{ width: 156, height: 48 }} />
           <p className="text-sm text-gray-300 leading-relaxed">
             Service moto autorizat RAR și service oficial KTM în București. Peste 15 ani de experiență
             în reparații, întreținere și tuning motociclete.

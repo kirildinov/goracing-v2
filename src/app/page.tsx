@@ -163,8 +163,8 @@ export default function HomePage() {
                 alt={partner.name}
                 className="h-10 md:h-14 w-auto object-contain"
                 loading="lazy"
-                width={120}
-                height={56}
+                width={140}
+                height={84}
               />
             ))}
           </div>
