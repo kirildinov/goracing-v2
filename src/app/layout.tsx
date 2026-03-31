@@ -6,7 +6,7 @@ const compiledCss = readFileSync(join(process.cwd(), "src/app/compiled.css"), "u
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import CookieConsent from "@/components/CookieConsent";
+import { LazyCookieConsent } from "@/components/LazyComponents";
 import { BUSINESS } from "@/data/business";
 
 export const metadata: Metadata = {
@@ -94,7 +94,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <WhatsAppButton />
-          <CookieConsent />
+          <LazyCookieConsent />
         </div>
         <script
           type="application/ld+json"

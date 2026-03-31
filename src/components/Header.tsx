@@ -34,7 +34,7 @@ const Header = () => {
             className="h-12 md:h-14 w-auto"
             width={310}
             height={95}
-            priority
+            loading="eager"
           />
         </Link>
 
