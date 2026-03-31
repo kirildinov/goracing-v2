@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "css": "tailwindcss -i src/app/globals.css -o src/app/compiled.css --minify",
+    "dev": "npm run css && next dev",
+    "build": "npm run css && next build",
     "start": "next start",
     "lint": "next lint"
   },
