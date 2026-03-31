@@ -3,31 +3,44 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-declare global {
-  interface Window {
-    dataLayer: Record<string, unknown>[];
-  }
+const CONSENT_KEY = "goracing_consent";
+
+function gtag(..._args: unknown[]): void {
+  window.dataLayer = window.dataLayer || [];
+  // eslint-disable-next-line prefer-rest-params
+  window.dataLayer.push(arguments);
 }
 
-const COOKIE_KEY = "goracing_consent";
+function grantConsent(): void {
+  gtag("consent", "update", {
+    analytics_storage: "granted",
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+  });
+}
 
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem(COOKIE_KEY);
-    if (!consent) setVisible(true);
+    const stored = localStorage.getItem(CONSENT_KEY);
+    if (stored === "granted") {
+      grantConsent();
+    } else if (!stored) {
+      setVisible(true);
+    }
+    // "denied" → do nothing, consent stays at default denied
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem(COOKIE_KEY, "accepted");
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "consent_accepted" });
+    localStorage.setItem(CONSENT_KEY, "granted");
+    grantConsent();
     setVisible(false);
   };
 
   const handleReject = () => {
-    localStorage.setItem(COOKIE_KEY, "rejected");
+    localStorage.setItem(CONSENT_KEY, "denied");
     setVisible(false);
   };
 
@@ -38,12 +51,18 @@ const CookieConsent = () => {
       <div className="container-content py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-gray-300 text-center sm:text-left">
           Folosim cookie-uri pentru a analiza traficul site-ului.{" "}
-          <Link href="/politica-confidentialitate" className="text-secondary-foreground underline hover:text-primary transition-colors">
+          <Link
+            href="/politica-confidentialitate"
+            className="text-secondary-foreground underline hover:text-primary transition-colors"
+          >
             Politica de Confidențialitate
           </Link>
         </p>
         <div className="flex gap-3 flex-shrink-0">
-          <button onClick={handleReject} className="btn-secondary text-sm py-2 px-4 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+          <button
+            onClick={handleReject}
+            className="btn-secondary text-sm py-2 px-4 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary"
+          >
             Refuză
           </button>
           <button onClick={handleAccept} className="btn-primary text-sm py-2 px-4">

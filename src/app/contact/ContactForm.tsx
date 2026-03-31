@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import { BUSINESS } from "@/data/business";
+import { track } from "@/lib/tracking";
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
@@ -22,6 +23,7 @@ const ContactForm = () => {
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", phone: "", email: "", message: "" });
+        track({ event: "cta_click", event_category: "contact_page", event_label: "form_submit" });
       } else {
         setStatus("error");
       }
@@ -35,7 +37,13 @@ const ContactForm = () => {
   return (
     <div>
       <div className="mb-8 flex flex-col gap-3">
-        <a href={`tel:${BUSINESS.phone}`} className="btn-primary justify-center py-3">
+        <a
+          href={`tel:${BUSINESS.phone}`}
+          className="btn-primary justify-center py-3"
+          onClick={() =>
+            track({ event: "cta_click", event_category: "contact_page", event_label: "phone" })
+          }
+        >
           <Phone className="h-5 w-5" /> Sună: {BUSINESS.phoneFormatted}
         </a>
         <a
@@ -43,6 +51,9 @@ const ContactForm = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary justify-center py-3"
+          onClick={() =>
+            track({ event: "cta_click", event_category: "contact_page", event_label: "whatsapp" })
+          }
         >
           WhatsApp
         </a>

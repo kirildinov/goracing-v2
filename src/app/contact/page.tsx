@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
-import { Phone, Mail, MapPin, Clock, Facebook, ExternalLink } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 import { BUSINESS } from "@/data/business";
+import { DirectionsLink, ContactPhoneLink, ContactEmailLink, ContactFacebookLink } from "./ContactActions";
 
 export const metadata: Metadata = {
   title: "Contact Service Moto București | GoRacing",
@@ -62,23 +63,21 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-foreground">Telefon</p>
-                    <a href={`tel:${BUSINESS.phone}`} className="text-primary text-sm">{BUSINESS.phone}</a>
+                    <ContactPhoneLink />
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <a href={`mailto:${BUSINESS.email}`} className="text-primary text-sm">{BUSINESS.email}</a>
+                    <ContactEmailLink />
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Facebook className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-foreground">Facebook</p>
-                    <a href={BUSINESS.social.facebook} target="_blank" rel="noopener noreferrer" className="text-primary text-sm">
-                      facebook.com/GoRacing.ro
-                    </a>
+                    <ContactFacebookLink />
                   </div>
                 </div>
               </div>
@@ -89,14 +88,7 @@ export default function ContactPage() {
                   Ne aflăm în zona Băneasa/Pipera, accesibil de pe Șoseaua București-Ploiești. Dispunem de parcare
                   pentru clienți.
                 </p>
-                <a
-                  href={BUSINESS.geo.directionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-primary text-sm font-medium mt-2"
-                >
-                  Obține indicații <ExternalLink className="h-3 w-3" />
-                </a>
+                <DirectionsLink />
               </div>
             </div>
           </div>

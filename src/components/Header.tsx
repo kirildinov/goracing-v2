@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Facebook } from "lucide-react";
 import { services } from "@/data/services";
 import { BUSINESS } from "@/data/business";
+import { track } from "@/lib/tracking";
 
 const navItems = [
   { label: "Acasă", path: "/" },
@@ -78,6 +79,14 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-secondary-foreground hover:text-primary transition-colors ml-2"
             aria-label="Facebook GoRacing"
+            onClick={() =>
+              track({
+                event: "outbound_click",
+                event_category: "header",
+                event_label: "facebook",
+                link_url: BUSINESS.social.facebook,
+              })
+            }
           >
             <Facebook className="h-5 w-5" />
           </a>
@@ -85,6 +94,9 @@ const Header = () => {
           <a
             href={`tel:${BUSINESS.phone}`}
             className="btn-primary ml-4 text-sm py-2 px-4"
+            onClick={() =>
+              track({ event: "cta_click", event_category: "header", event_label: "phone" })
+            }
           >
             <Phone className="h-4 w-4" />
             Sună: {BUSINESS.phoneFormatted}
@@ -96,6 +108,9 @@ const Header = () => {
             href={`tel:${BUSINESS.phone}`}
             className="text-primary"
             aria-label="Sună acum"
+            onClick={() =>
+              track({ event: "cta_click", event_category: "header", event_label: "phone" })
+            }
           >
             <Phone className="h-6 w-6" />
           </a>

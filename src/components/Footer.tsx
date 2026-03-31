@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 import { services } from "@/data/services";
 import { BUSINESS } from "@/data/business";
+import { track } from "@/lib/tracking";
 
 const Footer = () => (
   <footer className="bg-secondary text-secondary-foreground">
@@ -48,13 +51,25 @@ const Footer = () => (
               <span>{BUSINESS.address.full}</span>
             </li>
             <li>
-              <a href={`tel:${BUSINESS.phone}`} className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <a
+                href={`tel:${BUSINESS.phone}`}
+                className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors"
+                onClick={() =>
+                  track({ event: "cta_click", event_category: "footer", event_label: "phone" })
+                }
+              >
                 <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
                 {BUSINESS.phoneFormatted}
               </a>
             </li>
             <li>
-              <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <a
+                href={`mailto:${BUSINESS.email}`}
+                className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors"
+                onClick={() =>
+                  track({ event: "cta_click", event_category: "footer", event_label: "email" })
+                }
+              >
                 <Mail className="h-4 w-4 flex-shrink-0 text-primary" />
                 {BUSINESS.email}
               </a>
@@ -90,6 +105,14 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors"
+            onClick={() =>
+              track({
+                event: "outbound_click",
+                event_category: "footer",
+                event_label: "facebook",
+                link_url: BUSINESS.social.facebook,
+              })
+            }
           >
             <Facebook className="h-5 w-5" />
             Facebook
@@ -101,6 +124,9 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm py-2 px-4"
+              onClick={() =>
+                track({ event: "cta_click", event_category: "footer", event_label: "whatsapp" })
+              }
             >
               WhatsApp
             </a>

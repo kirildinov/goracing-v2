@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Star, ArrowRight, Shield, Award, Wrench, Clock } from "lucide-react";
+import { Star, ArrowRight, Shield, Award, Wrench, Clock } from "lucide-react";
+import { HeroPhoneCTA, HeroWhatsAppCTA, BottomPhoneCTA, BottomWhatsAppCTA, GoogleReviewsCTA } from "./HomeCTAs";
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 
@@ -46,18 +47,8 @@ export default function HomePage() {
             Reparații, întreținere și tuning pentru orice marcă de motocicletă. Service oficial KTM. Autorizat R.A.R.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:+40761320240" className="btn-primary text-base py-4 px-8">
-              <Phone className="h-5 w-5" />
-              Sună: 0761.320.240
-            </a>
-            <a
-              href="https://wa.me/40761320240?text=Bun%C4%83,%20doresc%20s%C4%83%20fac%20o%20programare%20la%20service."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-hero-secondary text-base py-4 px-8"
-            >
-              Scrie pe WhatsApp
-            </a>
+            <HeroPhoneCTA />
+            <HeroWhatsAppCTA />
           </div>
         </div>
       </section>
@@ -129,14 +120,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <a
-              href="https://maps.app.goo.gl/KAo8hQ5F9wLTbVBY7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary text-sm"
-            >
-              Verifică toate recenziile pe Google
-            </a>
+            <GoogleReviewsCTA />
           </div>
         </div>
       </section>
@@ -181,18 +165,8 @@ export default function HomePage() {
             Programează-te telefonic sau trimite-ne un mesaj pe WhatsApp. Răspundem în cel mai scurt timp.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+40761320240" className="btn-primary text-base py-4 px-8">
-              <Phone className="h-5 w-5" />
-              Sună Acum
-            </a>
-            <a
-              href="https://wa.me/40761320240?text=Bună, doresc să fac o programare la service."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-hero-secondary text-base py-4 px-8"
-            >
-              WhatsApp
-            </a>
+            <BottomPhoneCTA />
+            <BottomWhatsAppCTA />
           </div>
         </div>
       </section>

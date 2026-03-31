@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { ServiceContactCTA, ServicePhoneCTA, ServiceWhatsAppCTA } from "./ServiceDetailCTAs";
 import { services } from "@/data/services";
 
 export function generateStaticParams() {
@@ -111,21 +112,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             Programează-te pentru {service.name}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary py-3 px-6">
-              Programează-te Acum
-            </Link>
-            <a href="tel:+40761320240" className="btn-hero-secondary py-3 px-6">
-              <Phone className="h-5 w-5" />
-              0761.320.240
-            </a>
-            <a
-              href="https://wa.me/40761320240?text=Bună, doresc să fac o programare la service."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-hero-secondary py-3 px-6"
-            >
-              WhatsApp
-            </a>
+            <ServiceContactCTA />
+            <ServicePhoneCTA />
+            <ServiceWhatsAppCTA />
           </div>
         </div>
       </section>
