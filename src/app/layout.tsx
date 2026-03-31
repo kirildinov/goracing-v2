@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
-import { Montserrat, Inter } from "next/font/google";
 
 const compiledCss = readFileSync(join(process.cwd(), "src/app/compiled.css"), "utf8");
 import Header from "@/components/Header";
@@ -9,20 +8,6 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import { BUSINESS } from "@/data/business";
-
-const montserrat = Montserrat({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-  variable: "--font-heading",
-});
-
-const inter = Inter({
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-  variable: "--font-body",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.website),
@@ -91,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ro" className={`${montserrat.variable} ${inter.variable}`}>
+    <html lang="ro">
       <head>
         <style dangerouslySetInnerHTML={{ __html: compiledCss }} />
       </head>
