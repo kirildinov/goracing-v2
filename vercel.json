@@ -49,6 +49,6 @@
     { "source": "/wp-admin/:path*", "destination": "/", "permanent": true },
     { "source": "/wp-login.php", "destination": "/", "permanent": true },
     { "source": "/wp-content/:path*", "destination": "/", "permanent": true },
-    { "source": "/wp-json/:path*", "destination": "/", "permanent": false, "statusCode": 410 }
+    { "source": "/wp-json/:path*", "destination": "/", "permanent": true }
   ]
 }
