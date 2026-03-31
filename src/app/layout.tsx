@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { Montserrat, Inter } from "next/font/google";
 
 const compiledCss = readFileSync(join(process.cwd(), "src/app/compiled.css"), "utf8");
 import Header from "@/components/Header";
@@ -8,6 +9,20 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import { BUSINESS } from "@/data/business";
+
+const montserrat = Montserrat({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-heading",
+});
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  variable: "--font-body",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.website),
@@ -76,14 +91,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ro">
+    <html lang="ro" className={`${montserrat.variable} ${inter.variable}`}>
       <head>
         <style dangerouslySetInnerHTML={{ __html: compiledCss }} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script dangerouslySetInnerHTML={{ __html: `
-          var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap';document.head.appendChild(l);
-        `}} />
       </head>
       <body>
         <div className="min-h-screen flex flex-col">
