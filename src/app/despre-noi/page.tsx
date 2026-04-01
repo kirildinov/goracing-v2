@@ -46,10 +46,9 @@ export default function DespreNoiPage() {
 
           <h2 className="font-heading text-2xl font-bold mt-8">Echipa Noastră</h2>
           <p>
-            Zdrobi, Ștefan și Ovidiu formează nucleul echipei GoRacing — mecanici cu ani de experiență, certificați KTM,
-            pasionați de motociclete și dedicați excelentei tehnice. Comunicarea transparentă și onestă cu fiecare client
-            este principiul pe care îl prețuim cel mai mult. Nu recomandăm lucrări inutile și explicăm întotdeauna ce facem
-            și de ce.
+            Echipa GoRacing reunește mecanici cu ani de experiență, certificați KTM, care împărtășesc aceeași pasiune
+            pentru motociclete și același angajament față de calitate. Punem accent pe comunicarea deschisă și onestă —
+            explicăm fiecare intervenție, nu recomandăm lucrări inutile și ne asigurăm că înțelegi exact ce facem și de ce.
           </p>
 
           <h2 className="font-heading text-2xl font-bold mt-8">Certificări și Autorizări</h2>
