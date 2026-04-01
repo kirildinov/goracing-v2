@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "GoRacing Website <onboarding@resend.dev>",
+        from: "GoRacing Website <noreply@pixelmill.dev>",
         to: "info@goracing.ro",
         subject: `Mesaj nou de pe goracing.ro — ${name}`,
         reply_to: email || undefined,
