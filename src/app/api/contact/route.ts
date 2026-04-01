@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: "GoRacing Website <noreply@pixelmill.dev>",
-        to: "info@goracing.ro",
+        to: "stefan@goracing.ro",
         subject: `Mesaj nou de pe goracing.ro — ${name}`,
         reply_to: email || undefined,
         html: `

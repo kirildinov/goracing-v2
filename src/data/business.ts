@@ -12,7 +12,7 @@ export const BUSINESS = {
   },
   phone: "+40761320240",
   phoneFormatted: "0761.320.240",
-  email: "info@goracing.ro",
+  email: "stefan@goracing.ro",
   whatsapp: {
     number: "40761320240",
     message: "Bună, doresc să fac o programare la service.",

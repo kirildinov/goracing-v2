@@ -83,7 +83,7 @@ export default function PoliticaConfidentialitatePage() {
           <h2 className="font-heading text-xl font-bold mt-8">9. Contact GDPR</h2>
           <p>
             Pentru orice cereri legate de datele dumneavoastră personale, ne puteți contacta la:{" "}
-            <a href="mailto:info@goracing.ro" className="text-primary underline">info@goracing.ro</a>
+            <a href="mailto:stefan@goracing.ro" className="text-primary underline">stefan@goracing.ro</a>
           </p>
 
           <h2 className="font-heading text-xl font-bold mt-8">10. Autoritatea de Supraveghere</h2>
