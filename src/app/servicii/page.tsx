@@ -22,7 +22,7 @@ export default function ServiciiPage() {
             GoRacing este un atelier de service moto complet, autorizat RAR, care oferă o gamă largă de servicii pentru
             toate mărcile de motociclete. De la întreținere de bază la recondiționări complete de motor, de la remapare
             ECU la construcții custom cafe racer — avem experiența, echipamentele și pasiunea necesare.
-            Cu peste 15 ani de activitate în București și statut de service oficial KTM, suntem alegerea profesională
+            Cu peste 20 ani de activitate în București și statut de service oficial KTM, Husqvarna, Gas Gas, MV Agusta, Beta, suntem alegerea profesională
             pentru motocicliștii care nu fac compromisuri. Folosim echipamente moderne de diagnoză, dinamometru
             profesional și piese originale sau de calitate echivalentă.
           </p>

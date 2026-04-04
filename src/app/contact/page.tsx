@@ -85,7 +85,7 @@ export default function ContactPage() {
               <div className="mt-6 bg-muted rounded-md p-4">
                 <h3 className="font-heading font-bold text-sm mb-2">Cum ajungi la noi</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Ne aflăm în zona Băneasa/Pipera, accesibil de pe Șoseaua București-Ploiești. Dispunem de parcare
+                  Ne aflăm în zona Băneasa, accesibil de pe Bulevardul Ion Ionescu de la Brad. Dispunem de parcare
                   pentru clienți.
                 </p>
                 <DirectionsLink />

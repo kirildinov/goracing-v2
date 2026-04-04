@@ -4,7 +4,7 @@ import { Shield, Award, Wrench, Star } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Despre GoRacing | Service Moto Autorizat RAR București",
-  description: "Peste 15 ani de experiență în service moto. Autorizat RAR, service oficial KTM, echipă de mecanici pasionați în București.",
+  description: "Peste 20 ani de experiență în service moto. Autorizat RAR, service oficial KTM, Husqvarna, Gas Gas, MV Agusta, Beta. Echipă de mecanici pasionați în București.",
   alternates: { canonical: "/despre-noi" },
   openGraph: { type: "article" },
 };
@@ -35,8 +35,8 @@ export default function DespreNoiPage() {
         <div className="container-content max-w-4xl space-y-6 text-foreground leading-relaxed">
           <p>
             GoRacing a fost fondată din pasiunea pură pentru motociclete. Ce a început ca un mic atelier dedicat
-            întreținerii și reparațiilor moto a crescut, de-a lungul a peste 15 ani, într-unul dintre cele mai respectate
-            service-uri de motociclete din București — autorizat RAR și service oficial KTM.
+            întreținerii și reparațiilor moto a crescut, de-a lungul a peste 20 ani, într-unul dintre cele mai respectate
+            service-uri de motociclete din București — autorizat RAR și service oficial KTM, Husqvarna, Gas Gas, MV Agusta și Beta.
           </p>
           <p>
             Povestea noastră este una de dedicare constantă: de la primele motociclete reparate într-un garaj modest,
@@ -80,7 +80,7 @@ export default function DespreNoiPage() {
           <h2 className="font-heading text-2xl font-bold mt-8">Locație</h2>
           <p>
             Sediul nostru se află pe Bulevardul Ion Ionescu de la Brad 4, în Sectorul 1 al Bucureștiului, în zona
-            Băneasa/Pipera, ușor accesibil de pe Șoseaua București-Ploiești. Dispunem de parcare pentru clienți
+            Băneasa, ușor accesibil de pe Bulevardul Ion Ionescu de la Brad. Dispunem de parcare pentru clienți
             și de un spațiu de așteptare confortabil.
           </p>
         </div>

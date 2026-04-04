@@ -14,7 +14,7 @@ const Footer = () => (
         <div>
           <Image src="/logo.webp" alt="GoRacing" className="h-12 mb-4" width={156} height={48} style={{ width: 156, height: 48 }} />
           <p className="text-sm text-gray-300 leading-relaxed">
-            Service moto autorizat RAR și service oficial KTM în București. Peste 15 ani de experiență
+            Service moto autorizat RAR și service oficial KTM în București. Peste 20 ani de experiență
             în reparații, întreținere și tuning motociclete.
           </p>
         </div>

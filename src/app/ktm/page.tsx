@@ -49,9 +49,9 @@ export default function KTMPage() {
 
             <h2 className="font-heading text-2xl font-bold mt-8">Modele KTM Deservite</h2>
             <p>
-              Acoperim întreaga gamă KTM: seria Duke (125, 200, 390, 690, 790, 890, 1290 Super Duke R), seria Adventure
-              (390, 790, 890, 1290 Super Adventure), seria RC (125, 200, 390), seria EXC și EXC-F (enduro/competiție),
-              seria Freeride (250F, 350), precum și modelele SX și SX-F de motocross. Indiferent dacă aveți un Duke 125
+              Acoperim întreaga gamă KTM: seria Duke (125, 200, 390, 690, 790, 890, 1290, 1390 Super Duke R), seria Adventure
+              (390, 790, 890, 1090, 1190, 1290, 1390 Super Adventure), seria RC (125, 200, 390, 990), seria EXC și EXC-F (enduro/competiție),
+              precum și modelele SX și SX-F de motocross. Indiferent dacă aveți un Duke 125
               pentru oraș sau un 1290 Super Adventure pentru călătorii lungi, suntem pregătiți.
             </p>
 
@@ -65,7 +65,7 @@ export default function KTMPage() {
 
             <h2 className="font-heading text-2xl font-bold mt-8">Echipa Noastră KTM</h2>
             <p>
-              Mecanicii noștri — Zdrobi și Ștefan — sunt cei mai vechi specialiști KTM acreditați din București, cu ani de
+              Mecanicii noștri sunt cei mai vechi specialiști KTM acreditați din București, cu ani de
               experiență pe întreaga gamă de modele. Au participat la cursuri de formare KTM și au acces la cele mai noi
               tehnici de diagnoză și reparație. Comunicarea transparentă și atenția la detalii sunt valorile lor de bază
               — exact ceea ce clienții noștri apreciază cel mai mult, conform recenziilor.
@@ -74,7 +74,7 @@ export default function KTMPage() {
             <h2 className="font-heading text-2xl font-bold mt-8">Piese Originale KTM</h2>
             <p>
               Folosim exclusiv piese originale KTM PowerParts și KTM PowerWear. Avem un stoc permanent de consumabile
-              și piese uzuale, iar piesele speciale le comandăm direct de la KTM cu livrare în 2-5 zile lucrătoare.
+              și piese uzuale, iar piesele speciale le comandăm direct de la KTM cu livrare în 10 zile lucrătoare.
               Garanția pieselor originale vă oferă siguranța calității și compatibilității perfecte.
             </p>
           </div>

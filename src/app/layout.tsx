@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Service moto autorizat RAR în București. Reparații, întreținere, diagnoză ECU, vulcanizare, dyno tuning și service oficial KTM. Sună: 0761.320.240",
+    "Service moto autorizat RAR în București. Reparații, întreținere, diagnoză ECU, vulcanizare, dyno tuning și service oficial KTM, HUSQVARNA, GAS GAS, MV AGUSTA, BETA. Sună: 0761.320.240",
   openGraph: {
     type: "website",
     locale: "ro_RO",

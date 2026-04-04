@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 
 const stats = [
-  { icon: Clock, label: "Ani de Experiență", value: "15+" },
+  { icon: Clock, label: "Ani de Experiență", value: "20+" },
   { icon: Wrench, label: "Motociclete Reparate", value: "6500+" },
   { icon: Star, label: "Rating Google (280+ recenzii)", value: "4.8★" },
   { icon: Shield, label: "Service Autorizat R.A.R.", value: "R.A.R." },
@@ -44,7 +44,7 @@ export default function HomePage() {
             Service Moto Autorizat în București
           </h1>
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mb-8">
-            Reparații, întreținere și tuning pentru orice marcă de motocicletă. Service oficial KTM. Autorizat R.A.R.
+            Service moto autorizat RAR în București. Reparații, întreținere, diagnoză ECU, vulcanizare, dyno tuning și service oficial KTM, HUSQVARNA, GAS GAS, MV AGUSTA, BETA
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <HeroPhoneCTA />
